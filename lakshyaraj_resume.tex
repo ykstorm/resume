@@ -1,0 +1,184 @@
+% ---------------------------------
+% Lakshyaraj Singh Rao — Resume
+% Build: xelatex via GitHub Actions (blang/latex:ubuntu)
+% Standard article class, no external dependencies
+% ---------------------------------
+
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.4cm, top=1.2cm, bottom=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{multicol}
+\usepackage{microtype}
+
+% Colors
+\definecolor{primary}{HTML}{2563EB}
+\definecolor{darktext}{HTML}{1E293B}
+\definecolor{lighttext}{HTML}{64748B}
+\definecolor{border}{HTML}{E2E8F0}
+
+% Fonts (works with xelatex in GitHub Actions)
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+
+% Page setup
+\pagenumbering{gobble}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyfootoffset{0pt}
+
+% Custom commands
+\def\resumeSection#1{
+  \parbox[t]{\linewidth}{\color{primary}\large\bfseries\uppercase{#1}}
+  \nopagebreak\vspace{-2pt}
+  {\color{border}\rule{\linewidth}{0.5pt}}
+  \vspace{6pt}
+}
+
+\def\contact#1{{\footnotesize\color{lighttext}#1}}
+
+% Itemize
+\setlist{itemsep=0pt, topsep=3pt, leftmargin=14pt, label=\textbullet}
+
+\begin{document}
+
+% ===== HEADER =====
+\begin{tabular}[t]{@{}l}
+  {\LARGE\bfseries\Lakshyaraj\ Singh\ Rao}\\[4pt]
+  {\large\bfseries\color{primary}Full-Stack Engineer\ {\smaller\mdseries\cdot}\ AI Systems\ {\smaller\mdseries\cdot}\ 2026 Graduate}\\[6pt]
+  \contact{raolakshyaraj@gmail.com \quad\textbar\quad
+           linkedin.com/in/lakshyarajsinghrao \quad\textbar\quad
+           github.com/ykstorm \quad\textbar\quad
+           Jaipur, India}
+\end{tabular}
+\vspace{2pt}
+
+% ===== SUMMARY =====
+\resumeSection{Summary}
+\smallskip
+\noindent\fboxsep=8pt\fboxrule=0.4pt\fbox{
+  \parbox{0.97\linewidth}{
+    \small
+    Full-Stack Engineer and solo founder who built Homesty.ai's AI platform from scratch.
+    Hands-on with TypeScript, Next.js, PostgreSQL, RAG pipelines, and streaming LLM integrations.
+    5 production open-source projects (all MIT licensed) with 83+ tests across guardrail-proxy, stream-bench, rag-starter, and codecraft-ai.
+    Looking for Staff+ / Lead Engineer roles at AI product companies where platform work is as interesting as the product.
+  }
+}
+\vspace{6pt}
+
+% ===== SKILLS =====
+\resumeSection{Skills}
+\begin{multicols}{2}
+\begin{itemize}
+\itemsep0em
+\item \textbf{Languages:} TypeScript, JavaScript, Python, SQL, Bash
+\item \textbf{Frontend:} React 19, Next.js 15, Tailwind CSS v4, HTML/CSS
+\item \textbf{Backend:} Node.js, Next.js API Routes, Prisma 7, PostgreSQL, pgvector, Redis
+\item \textbf{AI/ML:} GPT-4o Streaming, RAG, guardrails, Ollama, OpenAI Embeddings, LangChain
+\item \textbf{Platform:} Kubernetes, ArgoCD, Docker, Redis, Neon Postgres, kind
+\item \textbf{DevOps:} GitHub Actions, Helm, Terraform, Prometheus, Loki, Grafana
+\item \textbf{Testing:} Vitest, Jest, Playwright --- 100+ tests across projects
+\end{itemize}
+\end{multicols}
+\vspace{4pt}
+
+% ===== PROJECTS =====
+\resumeSection{Open Source Projects (All MIT Licensed)}
+
+\textbf{guardrail-proxy}
+\quad\small\url{https://www.npmjs.com/package/@ykstorm/guardrail-proxy}
+\quad\url{https://github.com/ykstorm/guardrail-proxy}
+\quad\textit{MIT · 27 tests · TypeScript}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{What:} NPM package for production LLM safety --- mid-stream abort with 16-token sliding window
+\item \textbf{How:} Hard-abort patterns throw immediately; soft-observe patterns fire callbacks and continue
+\item \textbf{API:} StreamingGuard (streaming) + checkResponse() (23 CHECK cases). Partial delivery on every abort
+\end{itemize}
+\vspace{4pt}
+
+\textbf{codecraft-ai}
+\quad\small\url{https://codecraft-ai.vercel.app}
+\quad\url{https://github.com/ykstorm/codecraft-ai}
+\quad\textit{MIT · 23 tests · 13K+ LOC}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{What:} Browser-based IDE: WebContainers (real Node.js in browser), Monaco Editor, xterm.js terminal
+\item \textbf{AI:} 4-mode Ollama chat (Chat/Review/Fix/Optimize). NextAuth v5, Prisma + MongoDB
+\item \textbf{Deploy:} Live at codecraft-ai.vercel.app. Docker Compose dev. GitHub Actions CI/CD
+\end{itemize}
+\vspace{4pt}
+
+\textbf{stream-bench}
+\quad\small\url{https://github.com/ykstorm/stream-bench}
+\quad\textit{MIT · 8 tests}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{Benchmarks:} TTFT, TPS, guardrail overhead vs baseline across OpenAI + Anthropic providers
+\item \textbf{Cost:} JSON Lines ledger with \$2 hard ceiling --- halts before overage
+\end{itemize}
+\vspace{4pt}
+
+\textbf{rag-starter}
+\quad\small\url{https://github.com/ykstorm/rag-starter}
+\quad\textit{MIT · 15 tests · Next.js 15 · Prisma 7}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{RAG:} pgvector embeddings, 0.30 cosine score floor, adaptive K (6/10)
+\item \textbf{Upsert:} embed-writer with idempotent ON CONFLICT upsert. CLI for bulk backfill
+\end{itemize}
+\vspace{4pt}
+
+\textbf{devops-showcase}
+\quad\small\url{https://github.com/ykstorm/devops-showcase}
+\quad\textit{MIT · Kubernetes · ArgoCD}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{Stack:} kind cluster + ArgoCD app-of-apps, Argo Rollouts (canary deploys + auto-rollback)
+\item \textbf{Observability:} Prometheus + Loki + Tempo + Grafana. Pod Security Standards restricted
+\end{itemize}
+\vspace{6pt}
+
+% ===== EXPERIENCE =====
+\resumeSection{Experience}
+
+\textbf{Homesty.ai --- Founder / Engineer} \quad Jaipur, India \quad 2024 -- Present
+\vspace{1pt}
+\begin{itemize}
+\item Solo-built production AI platform from scratch --- streaming GPT-4o chat with runtime guardrails (mid-generation abort)
+\item pgvector RAG pipeline with sub-50ms retrieval latency; 165+ production deploys with zero-downtime
+\item 7-module Decision Engine enforcing 6 business locks; Redis rate limiting; RERA paste-extract admin panel
+\item Stack: Next.js 15, Prisma 7, PostgreSQL/pgvector, Neon serverless, Redis, Kubernetes, ArgoCD, Prometheus
+\end{itemize}
+\vspace{6pt}
+
+% ===== EDUCATION =====
+\resumeSection{Education}
+
+\textbf{B.Tech, Computer Science \& Communication Engineering} \quad Manipal University Jaipur \quad Expected 2026
+\vspace{1pt}
+\begin{itemize}
+\item Junior year, 8th semester --- CC4270 Major Project: chai-vibe-editor (supervised by Mr. Jitendra Singh Yadav)
+\item LeetCode: 7 problems solved (Arrays, Trees) \quad GitHub: 16 public repos, 7 followers
+\end{itemize}
+\vspace{6pt}
+
+% ===== FOOTER =====
+\noindent{\color{border}\rule{\linewidth}{0.3pt}}
+\vspace{3pt}
+{\small\color{lighttext}
+  All projects MIT Licensed ·
+  \href{https://github.com/ykstorm}{github.com/ykstorm} ·
+  \href{https://linkedin.com/in/lakshyarajsinghrao}{linkedin.com/in/lakshyarajsinghrao} ·
+  Updated: \today
+}
+
+\end{document}
