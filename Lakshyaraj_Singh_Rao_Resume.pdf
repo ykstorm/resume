@@ -1,0 +1,240 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 4279 >>
+stream
+BT
+/F2 18 Tf
+50 750 Td
+(Lakshyaraj Singh Rao) Tj
+ET
+BT
+/F1 11 Tf
+50 725 Td
+(**Full-Stack Engineer · AI Systems · Backend · DevOps**) Tj
+ET
+BT
+/F1 11 Tf
+50 713 Td
+(Mumbai, India · raolakshyaraj@gmail.com · [linkedin.com/in/lakshyaraj]\(https://linkedin.com/in/laks) Tj
+ET
+BT
+/F2 14 Tf
+50 701 Td
+(SUMMARY) Tj
+ET
+BT
+/F1 11 Tf
+50 681 Td
+(Backend-focused engineer who ships production AI products end-to-end. Solo-built and operates Homest) Tj
+ET
+BT
+/F2 14 Tf
+50 669 Td
+(TECHNICAL SKILLS) Tj
+ET
+BT
+/F1 11 Tf
+50 649 Td
+(**Languages:** TypeScript, JavaScript \(ES6+\), C++, SQL) Tj
+ET
+BT
+/F1 11 Tf
+50 637 Td
+(**Backend:** Node.js, Express.js, Next.js 15, REST APIs, JWT Auth, Prisma ORM, Zod) Tj
+ET
+BT
+/F1 11 Tf
+50 625 Td
+(**AI / LLM:** GPT-4o, Claude Sonnet, Vercel AI SDK, RAG \(pgvector\), Streaming, Prompt Engineering) Tj
+ET
+BT
+/F1 11 Tf
+50 613 Td
+(**Databases:** PostgreSQL \(Neon\), pgvector, MongoDB, Redis \(Upstash\), RabbitMQ) Tj
+ET
+BT
+/F1 11 Tf
+50 601 Td
+(**DevOps & Cloud:** Docker, Docker Compose, GitHub Actions, Vercel, AWS EC2, Kubernetes, ArgoCD) Tj
+ET
+BT
+/F1 11 Tf
+50 589 Td
+(**Observability:** Sentry, Prometheus, Grafana, Winston, Playwright, Vitest) Tj
+ET
+BT
+/F2 14 Tf
+50 577 Td
+(EXPERIENCE) Tj
+ET
+BT
+/F2 12 Tf
+50 557 Td
+(Founding Engineer & Co-Founder — Homesty AI Technology LLP) Tj
+ET
+BT
+/F1 11 Tf
+50 541 Td
+(*Mumbai, India · Mar 2026 – Present · Entity incorporating May 2026 · [homesty.ai]\(https://homesty.) Tj
+ET
+BT
+/F1 11 Tf
+50 529 Td
+(Solo engineer on the production stack. End-to-end ownership: system prompt design, RAG infrastructur) Tj
+ET
+BT
+/F1 11 Tf
+50 517 Td
+(  - Shipped buyerchat to production: Next.js 15 + Postgres + pgvector + Prisma 7 + GPT-4o + Claude +) Tj
+ET
+BT
+/F1 11 Tf
+50 505 Td
+(  - 165 production deployments. 0 critical Sentry classes firing under live traffic. 159 unit tests ) Tj
+ET
+BT
+/F1 11 Tf
+50 493 Td
+(  - Engineered 5-layer anti-fabrication architecture: PART 0 hard-stop rules + onChunk markdown abor) Tj
+ET
+BT
+/F1 11 Tf
+50 481 Td
+(  - Closed 8 production hallucination classes including OTP-simulation, fabricated entity names, and) Tj
+ET
+BT
+/F1 11 Tf
+50 469 Td
+(  - 8-stage chat pipeline: per-IP rate limit → intent classifier → RAG retrieval → GPT-4o streaming ) Tj
+ET
+BT
+/F1 11 Tf
+50 457 Td
+(  - Built 7-module Decision Engine: scores projects against buyer preferences, generates Strong Buy ) Tj
+ET
+BT
+/F1 11 Tf
+50 445 Td
+(  - pgvector retriever with 600ms timeout + 0.30 cosine floor \(silently drops weak matches instead ) Tj
+ET
+BT
+/F1 11 Tf
+50 433 Td
+(  - Security: prompt injection protection, PII stripping, origin checks, PRICING_LOCKED canonical su) Tj
+ET
+BT
+/F2 14 Tf
+50 421 Td
+(PROJECTS) Tj
+ET
+BT
+/F2 12 Tf
+50 401 Td
+([rag-starter]\(https://github.com/ykstorm/rag-starter\)) Tj
+ET
+BT
+/F1 11 Tf
+50 385 Td
+(Production RAG template extracted from buyerchat. pgvector retrieval, embed-writer, cosine-floor, pr) Tj
+ET
+BT
+/F2 12 Tf
+50 373 Td
+([guardrail-proxy]\(https://github.com/ykstorm/guardrail-proxy\)) Tj
+ET
+BT
+/F1 11 Tf
+50 357 Td
+(Streaming LLM safety. Mid-chunk abort when audit catches violation — user never sees a bad response ) Tj
+ET
+BT
+/F2 12 Tf
+50 345 Td
+([devops-showcase]\(https://github.com/ykstorm/devops-showcase\)) Tj
+ET
+BT
+/F1 11 Tf
+50 329 Td
+(Kubernetes + ArgoCD GitOps stack. Canary deploys, Prometheus, Grafana. Apache 2.0.) Tj
+ET
+BT
+/F2 12 Tf
+50 317 Td
+([k8s-deploy-tracker]\(https://github.com/ykstorm/k8s-deploy-tracker\)) Tj
+ET
+BT
+/F1 11 Tf
+50 301 Td
+(Go service that consumes Kubernetes deploy events and feeds failing ones to GPT-4 for one-paragraph ) Tj
+ET
+BT
+/F2 12 Tf
+50 289 Td
+([stream-bench]\(https://github.com/ykstorm/stream-bench\)) Tj
+ET
+BT
+/F1 11 Tf
+50 273 Td
+(Benchmarks for LLM streaming: time-to-first-token, throughput, total latency across OpenAI, Anthropi) Tj
+ET
+BT
+/F2 14 Tf
+50 261 Td
+(EDUCATION) Tj
+ET
+BT
+/F1 11 Tf
+50 241 Td
+(**Manipal University Jaipur** — B.Tech, Computer Science) Tj
+ET
+BT
+/F1 11 Tf
+50 229 Td
+(*Graduating 2026*) Tj
+ET
+BT
+/F2 14 Tf
+50 217 Td
+(RECOGNITION) Tj
+ET
+BT
+/F1 11 Tf
+50 197 Td
+(  - **Production Reliability:** 165 deployments shipped, 0 critical Sentry classes firing, 159 unit ) Tj
+ET
+BT
+/F1 11 Tf
+50 185 Td
+(  - **Anti-Fabrication Architecture:** Closed 8 production hallucination classes via PART 0 hard rul) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000004581 00000 n 
+0000004651 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4726
+%%EOF
