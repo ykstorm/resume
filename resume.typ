@@ -24,7 +24,7 @@ Full-stack engineer specialized in AI infrastructure: vector retrieval, LLM stre
 
 *Tripwire* — Mid-stream LLM token guardrail. Sub-millisecond abort on rule trip. Token-by-token pattern matching against rule set. #link("https://github.com/ykstorm/tripwire")[github.com/ykstorm/tripwire]
 
-*Quickdraw* — LLM streaming benchmark CLI. Captures TTFT, tokens/sec, $/1K. Nightly bench against OpenAI + Anthropic, diffs vs baseline. #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
+*Quickdraw* — LLM streaming benchmark CLI. Captures TTFT, tokens/sec, USD per 1K tokens. Nightly bench against OpenAI + Anthropic, diffs vs baseline. #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
 
 *Stackup* — Local production-style Kubernetes in 10 minutes. ArgoCD + Argo Rollouts + Grafana via single make up target. #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
 
