@@ -1,0 +1,39 @@
+name: Build Resume PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.tex'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full
+
+      - name: Compile LaTeX
+        run: |
+          pdflatex -halt-on-error -interaction=nonstopmode lakshyaraj_resume.tex
+          pdflatex -halt-on-error -interaction=nonstopmode lakshyaraj_resume.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: lakshyaraj_resume.pdf
+
+      - name: Create Release
+        if: github.event_name == 'workflow_dispatch'
+        uses: softprops/action-gh-release@v1
+        with:
+          files: lakshyaraj_resume.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
