@@ -7,7 +7,7 @@
   #text(size: 18pt, weight: "bold")[Lakshyaraj Singh Rao] \
   #text(size: 9.5pt)[
     Backend Engineer · AI Infrastructure · Eval Systems \
-    Mumbai, India · #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj@gmail.com] · #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[github.com/ykstorm]
+    Mumbai, India · #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj at gmail.com] · #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[github.com/ykstorm]
   ]
 ]
 
@@ -15,7 +15,7 @@
 
 == Summary
 
-Backend engineer specializing in production AI infrastructure: provenance-first RAG, mid-stream LLM guardrails, and eval harnesses that block bad merges. Author of three published npm packages under @ykstormsorg and a public GitHub Action that posts PR comments and blocks merges on AI behavior regression.
+Backend engineer specializing in production AI infrastructure: provenance-first RAG, mid-stream LLM guardrails, and eval harnesses that block bad merges. Author of three published npm packages under the @ykstormsorg scope and a public GitHub Action that posts PR comments and blocks merges on AI behavior regression.
 
 == Open-Source Projects
 *Goldset* — Three-runner AI eval framework (goldenDataset, llmJudge, structural) shipped as a public GitHub Action. PR comment diffs the delta; structural-assertion failures block merge. Single bundled dist/action.cjs (938 KB) — no install at consumer side. #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset] · #link("https://www.npmjs.com/package/@ykstormsorg/goldset")[npm]
