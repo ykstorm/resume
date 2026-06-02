@@ -15,7 +15,7 @@
 
 == Summary
 
-Backend engineer specializing in production AI infrastructure: provenance-first RAG, mid-stream LLM guardrails, and eval harnesses that block bad merges. Author of three published npm packages under the @ykstormsorg scope and a public GitHub Action that posts PR comments and blocks merges on AI behavior regression.
+Backend engineer specializing in production AI infrastructure: provenance-first RAG, mid-stream LLM guardrails, and eval harnesses that block bad merges. Author of three published npm packages under the \u{40}ykstormsorg scope and a public GitHub Action that posts PR comments and blocks merges on AI behavior regression.
 
 == Open-Source Projects
 *Goldset* — Three-runner AI eval framework (goldenDataset, llmJudge, structural) shipped as a public GitHub Action. PR comment diffs the delta; structural-assertion failures block merge. Single bundled dist/action.cjs (938 KB) — no install at consumer side. #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset] · #link("https://www.npmjs.com/package/@ykstormsorg/goldset")[npm]
@@ -64,7 +64,7 @@ Manipal University Jaipur — B.Tech, Computer Science · Graduating 2026
 
 == Recognition
 
-- 3 npm packages published under @ykstormsorg scope
+- 3 npm packages published under the \u{40}ykstormsorg scope
 - Goldset listed on GitHub Marketplace (Continuous Integration)
 - 6 open-source repos under Apache 2.0 with working demos
 - Anchor live demo + playground at anchor-iota-ten.vercel.app
