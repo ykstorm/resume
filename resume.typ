@@ -1,5 +1,5 @@
 #set page(paper: "us-letter", margin: (x: 0.55in, y: 0.5in))
-#set text(font: ("Liberation Sans", "DejaVu Sans", "Arial"), size: 9.5pt)
+#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9.5pt)
 #set par(justify: true, leading: 0.55em)
 
 #let accent = rgb("#1a73e8")
@@ -84,7 +84,7 @@ Backend-focused engineer building production AI infrastructure. Three published 
 - Three-runner AI eval framework (goldenDataset · llmJudge · structural assertions) shipped as a public GitHub Action.
 - PR comment diffs the delta on every push; structural-assertion failures block merge.
 - Single bundled 938 KB dist/action.cjs (esbuild) — zero install at consumer side.
-- Published as @ykstormsorg/goldset v0.2.0 on npm and listed on GitHub Marketplace (Continuous Integration).
+- Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm and listed on GitHub Marketplace (Continuous Integration).
 #h(0pt) #tag[TypeScript] #tag[esbuild] #tag[OpenAI] #tag[Anthropic] #tag[GitHub Actions]
 #v(0.3em)
 #project-header("Anchor", "Creator") · #link("https://anchor-iota-ten.vercel.app/playground")[anchor-iota-ten.vercel.app/playground]
@@ -99,14 +99,14 @@ Backend-focused engineer building production AI infrastructure. Three published 
 - Mid-stream LLM safety. Token-by-token rule engine aborts the response stream on rule trip.
 - Sub-millisecond decision per chunk; zero buffering on happy path.
 - User never sees a bad response finish rendering — abort happens before the next token reaches them.
-- Published as @ykstormsorg/tripwire on npm.
+- Published as `\u{40}ykstormsorg/tripwire` on npm.
 #h(0pt) #tag[TypeScript] #tag[Node async iterators] #tag[streaming abort]
 
 #v(0.3em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
 - LLM streaming benchmark CLI. Captures TTFT, tokens-per-second, and dollar-per-1K tokens.
 - Nightly run at 03:00 UTC across OpenAI + Anthropic; diffs vs. baseline and commits results to repo.
-- Published as @ykstormsorg/quickdraw on npm.
+- Published as `\u{40}ykstormsorg/quickdraw` on npm.
 #h(0pt) #tag[TypeScript] #tag[OpenAI SDK] #tag[Anthropic SDK] #tag[GHA cron]
 
 #v(0.3em)
