@@ -1,12 +1,13 @@
 #set page(paper: "us-letter", margin: (x: 0.6in, y: 0.55in))
 #set text(font: "New Computer Modern", size: 10pt)
 #set par(justify: true, leading: 0.55em)
+#show heading.where(level: 2): set text(size: 11pt, weight: "bold")
 
 #align(center)[
   #text(size: 18pt, weight: "bold")[Lakshyaraj Singh Rao] \
   #text(size: 9.5pt)[
-    Full-Stack Engineer · AI Systems · Backend · DevOps \
-    Mumbai → Remote · #link("mailto:balveer767@gmail.com")[balveer767\@gmail.com] · #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[github.com/ykstorm]
+    Backend Engineer · AI Infrastructure · Eval Systems \
+    Mumbai, India · #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj@gmail.com] · #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[github.com/ykstorm]
   ]
 ]
 
@@ -14,31 +15,62 @@
 
 == Summary
 
-Full-stack engineer specialized in AI infrastructure: vector retrieval, LLM streaming guardrails, eval harnesses. Built 6 OSS projects + 3 npm packages in the AI tooling space. Apache 2.0 by default.
+Backend engineer specializing in production AI infrastructure: provenance-first RAG, mid-stream LLM guardrails, and eval harnesses that block bad merges. Author of three published npm packages under @ykstormsorg and a public GitHub Action that posts PR comments and blocks merges on AI behavior regression.
 
-== Recent Projects
+== Open-Source Projects
+*Goldset* — Three-runner AI eval framework (goldenDataset, llmJudge, structural) shipped as a public GitHub Action. PR comment diffs the delta; structural-assertion failures block merge. Single bundled dist/action.cjs (938 KB) — no install at consumer side. #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset] · #link("https://www.npmjs.com/package/@ykstormsorg/goldset")[npm]
 
-*Goldset* — Golden datasets + LLM-as-judge + structural assertions, as a GitHub Action. Three-runner architecture posts PR comment with delta, blocks merge on regression. _Published on npm + GitHub Marketplace._ #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset]
+_TypeScript · esbuild · OpenAI · Anthropic · Apache 2.0_
 
-*Anchor* — Provenance-first RAG with cosine-floor refusal. Postgres + pgvector + Prisma + Next.js. Live demo with playground. _16 projects, 5 builders, 60 embeddings._ #link("https://anchor-iota-ten.vercel.app")[anchor-iota-ten.vercel.app]
+*Anchor* — Provenance-first RAG layer with cosine-floor refusal. Returns chunks when similarity >= 0.30; returns refused: true and zero chunks below floor. Idempotent upsert on (sourceType, sourceId). #link("https://anchor-iota-ten.vercel.app")[anchor-iota-ten.vercel.app]
 
-*Tripwire* — Mid-stream LLM token guardrail. Sub-millisecond abort on rule trip. Token-by-token pattern matching against rule set. #link("https://github.com/ykstorm/tripwire")[github.com/ykstorm/tripwire]
+_TypeScript · Next.js 15 · Postgres + pgvector · Prisma 7 · OpenAI text-embedding-3-small_
 
-*Quickdraw* — LLM streaming benchmark CLI. Captures TTFT, tokens/sec, USD per 1K tokens. Nightly bench against OpenAI + Anthropic, diffs vs baseline. #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
+*Tripwire* — Mid-stream LLM safety. Token-by-token rule engine aborts the response stream on rule trip. Sub-millisecond decision per chunk, zero buffering on happy path. #link("https://github.com/ykstorm/tripwire")[github.com/ykstorm/tripwire]
 
-*Stackup* — Local production-style Kubernetes in 10 minutes. ArgoCD + Argo Rollouts + Grafana via single make up target. #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
+_TypeScript · Node async iterators · streaming abort_
 
-*Codecraft* — In-browser IDE running real Node.js via WebContainers + Monaco + local Ollama for AI completions. #link("https://github.com/ykstorm/codecraft-ai")[github.com/ykstorm/codecraft-ai]
+*Quickdraw* — LLM streaming benchmark CLI. Captures TTFT, tokens-per-second, and dollar-per-1K across OpenAI and Anthropic. Nightly run at 03:00 UTC diffs vs baseline. #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
+
+_TypeScript · OpenAI SDK · Anthropic SDK_
+
+*Stackup* — Production-style Kubernetes locally in 10 minutes via single make up target. ArgoCD + Argo Rollouts + Grafana + Prometheus on kind cluster. #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
+
+_Helm · ArgoCD · kind · Bash_
+
+*Codecraft* — In-browser IDE running real Node.js via WebContainers, Monaco for editing, local Ollama for AI completions. Zero cloud roundtrip required. #link("https://codecraft-ai.vercel.app")[codecraft-ai.vercel.app]
+
+_WebContainers · Monaco · Ollama · Next.js_
+
+== In Progress
+
+*Backend Platform Module Suite* — BullMQ-backed idempotent job queue + retry-safe webhook receiver + Terraform module for one-click stack provisioning. Targeting backend-platform roles at Supabase, Trigger.dev, Razorpay.
+
+== Experience
+
+*Freelance Backend & AI Engineer* — Remote · Mar 2025 – Present
+Production AI features for client projects: RAG pipelines, LLM streaming, eval harnesses, and CI/CD pipelines. Multiple deployments live; client specifics under NDA.
 
 == Technical Skills
 
 - *Languages*: TypeScript, Python, Rust (learning)
-- *Backend*: Node.js, Postgres, Redis, Prisma, BullMQ
+- *Backend*: Node.js, Postgres, pgvector, Prisma 7, BullMQ, Redis
 - *Infra*: Docker, Kubernetes, Terraform, GitHub Actions, Vercel
 - *AI / Retrieval*: OpenAI, Anthropic, pgvector, Ollama, eval harnesses, RAG
 
+== Education
+
+Manipal University Jaipur — B.Tech, Computer Science · Graduating 2026
+
+== Recognition
+
+- 3 npm packages published under @ykstormsorg scope
+- Goldset listed on GitHub Marketplace (Continuous Integration)
+- 6 open-source repos under Apache 2.0 with working demos
+- Anchor live demo + playground at anchor-iota-ten.vercel.app
+
 #align(center)[
   #text(size: 8pt)[
-    Apache 2.0 by default. Latest version: #link("https://github.com/ykstorm/resume")[github.com/ykstorm/resume]
+    Latest version: #link("https://github.com/ykstorm/resume")[github.com/ykstorm/resume]
   ]
 ]

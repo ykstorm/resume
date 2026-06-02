@@ -3,7 +3,6 @@ on:
   push:
     branches: [main, master]
   workflow_dispatch:
-
 permissions:
   contents: write
 jobs:
@@ -11,25 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install Typst (binary download — no actions, no GLIBC issues)
+      - name: Install Typst binary
         run: |
           curl -fsSL https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz -o /tmp/typst.tar.xz
-          mkdir -p /tmp/typst
-          tar -xJf /tmp/typst.tar.xz -C /tmp/typst --strip-components=1
+          mkdir -p /tmp/typst && tar -xJf /tmp/typst.tar.xz -C /tmp/typst --strip-components=1
           sudo mv /tmp/typst/typst /usr/local/bin/typst
           typst --version
-      - name: Compile resume
+      - name: Compile
         run: typst compile resume.typ resume.pdf
-      - name: Verify PDF was created
-        run: |
-          ls -la resume.pdf
-          file resume.pdf
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: resume.pdf
           path: resume.pdf
-      - name: Commit PDF back to repo
+      - name: Commit PDF back
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

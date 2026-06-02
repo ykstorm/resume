@@ -1,73 +1,22 @@
 # Lakshyaraj Singh Rao
 
-**Full-Stack Engineer · AI Systems · Backend · DevOps**
+Backend engineer. AI infrastructure. Eval systems. Mumbai → Remote.
 
-Mumbai, India · raolakshyaraj@gmail.com · [linkedin.com/in/lakshyaraj](https://linkedin.com/in/lakshyaraj) · [github.com/ykstorm](https://github.com/ykstorm)
+I build the libraries I needed when shipping AI products that couldn't lie to users.
 
----
+Open-source toolkit — all Apache 2.0:
 
-## SUMMARY
+- 🪨 [Anchor](https://github.com/ykstorm/anchor) — Provenance-first RAG with cosine-floor refusal. Returns refused: true when similarity falls below 0.30. [Live playground](https://anchor-iota-ten.vercel.app/playground).
+- ⚡️ [Goldset](https://github.com/ykstorm/goldset) — Three-runner AI eval framework as a GitHub Action. PR comment diffs the delta, blocks merge on regression. Published to npm + Marketplace.
+- 🚦 [Tripwire](https://github.com/ykstorm/tripwire) — Mid-stream LLM safety. Token-by-token rule engine, sub-millisecond abort on rule trip.
+- 📊 [Quickdraw](https://github.com/ykstorm/quickdraw) — LLM streaming benchmark CLI. TTFT, tokens/sec, $/1K. Nightly bench against OpenAI + Anthropic.
+- ☸️ [Stackup](https://github.com/ykstorm/stackup) — Production-style Kubernetes locally in 10 minutes. ArgoCD + Argo Rollouts + Grafana via one make up.
+- 💻 [Codecraft](https://github.com/ykstorm/codecraft-ai) — In-browser IDE with real Node.js via WebContainers + local Ollama. [Live](https://codecraft-ai.vercel.app).
 
-Backend-focused engineer who ships production AI products end-to-end. Solo-built and operates Homesty.ai — a live, commission-generating real-estate AI platform — with a 5-layer anti-fabrication system, 165 production deployments, and 0 critical Sentry classes firing under live traffic. Comfortable across the full stack: REST API design, Prisma ORM, RAG infrastructure, Docker, CI/CD, observability.
+On npm: [@ykstormsorg](https://www.npmjs.com/~ykstormsorg) — goldset, quickdraw, tripwire
 
----
+Currently building: Backend Platform Module Suite — BullMQ-backed idempotent job queue + retry-safe webhook receiver + Terraform module.
 
-## TECHNICAL SKILLS
+Open to: Backend platform roles · AI infra contracts
 
-**Languages:** TypeScript, JavaScript (ES6+), C++, SQL
-**Backend:** Node.js, Express.js, Next.js 15, REST APIs, JWT Auth, Prisma ORM, Zod
-**AI / LLM:** GPT-4o, Claude Sonnet, Vercel AI SDK, RAG (pgvector), Streaming, Prompt Engineering
-**Databases:** PostgreSQL (Neon), pgvector, MongoDB, Redis (Upstash), RabbitMQ
-**DevOps & Cloud:** Docker, Docker Compose, GitHub Actions, Vercel, AWS EC2, Kubernetes, ArgoCD
-**Observability:** Sentry, Prometheus, Grafana, Winston, Playwright, Vitest
-
----
-
-## EXPERIENCE
-
-### Founding Engineer & Co-Founder — Homesty AI Technology LLP
-*Mumbai, India · Mar 2026 – Present · Entity incorporating May 2026 · [homesty.ai](https://homesty.ai)*
-
-Solo engineer on the production stack. End-to-end ownership: system prompt design, RAG infrastructure, full-stack development, security, observability, incident response. Co-founded with Balvir Singh Rao (operations and legal).
-
-- Shipped buyerchat to production: Next.js 15 + Postgres + pgvector + Prisma 7 + GPT-4o + Claude + Sentry + Upstash Redis + Docker. 16 RERA-verified projects indexed for South Bopal and Shela, Ahmedabad.
-- 165 production deployments. 0 critical Sentry classes firing under live traffic. 159 unit tests passing. Live commission model.
-- Engineered 5-layer anti-fabrication architecture: PART 0 hard-stop rules + onChunk markdown abort + 17-class regex audit + source-provenance API blockade + GUARD_LIST RAG grounding.
-- Closed 8 production hallucination classes including OTP-simulation, fabricated entity names, and invented founding years.
-- 8-stage chat pipeline: per-IP rate limit → intent classifier → RAG retrieval → GPT-4o streaming → post-stream audit → DB log + Sentry alert.
-- Built 7-module Decision Engine: scores projects against buyer preferences, generates Strong Buy / Buy with Conditions / Avoid tags with honest concern disclosures.
-- pgvector retriever with 600ms timeout + 0.30 cosine floor (silently drops weak matches instead of feeding garbage to the model).
-- Security: prompt injection protection, PII stripping, origin checks, PRICING_LOCKED canonical surface, per-IP capture rate limiting.
-
----
-
-## PROJECTS
-
-### [rag-starter](https://github.com/ykstorm/rag-starter)
-Production RAG template extracted from buyerchat. pgvector retrieval, embed-writer, cosine-floor, provenance API for grounded citations. Apache 2.0.
-
-### [guardrail-proxy](https://github.com/ykstorm/guardrail-proxy)
-Streaming LLM safety. Mid-chunk abort when audit catches violation — user never sees a bad response finish rendering. 17-class regex audit, PII scrub. Apache 2.0.
-
-### [devops-showcase](https://github.com/ykstorm/devops-showcase)
-Kubernetes + ArgoCD GitOps stack. Canary deploys, Prometheus, Grafana. Apache 2.0.
-
-### [k8s-deploy-tracker](https://github.com/ykstorm/k8s-deploy-tracker)
-Go service that consumes Kubernetes deploy events and feeds failing ones to GPT-4 for one-paragraph summaries. Apache 2.0.
-
-### [stream-bench](https://github.com/ykstorm/stream-bench)
-Benchmarks for LLM streaming: time-to-first-token, throughput, total latency across OpenAI, Anthropic, Bedrock. Apache 2.0.
-
----
-
-## EDUCATION
-
-**Manipal University Jaipur** — B.Tech, Computer Science
-*Graduating 2026*
-
----
-
-## RECOGNITION
-
-- **Production Reliability:** 165 deployments shipped, 0 critical Sentry classes firing, 159 unit tests passing — homesty.ai live traffic.
-- **Anti-Fabrication Architecture:** Closed 8 production hallucination classes via PART 0 hard rules + 17-class regex audit + GUARD_LIST RAG grounding.
+📍 [lakshyaraj-dev.vercel.app](https://lakshyaraj-dev.vercel.app) · 📧 raolakshyaraj@gmail.com · 🐦 [@ykstorm](https://x.com/ykstorm)
