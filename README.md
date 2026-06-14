@@ -1,22 +1,57 @@
-# Lakshyaraj Singh Rao
+# Lakshyaraj Singh Rao — Resume
 
-Backend engineer. AI infrastructure. Eval systems. Mumbai → Remote.
+Resume source, written in [Typst](https://typst.app). GitHub Actions compiles it
+to `resume.pdf` on every push to `main` and commits the PDF back to the repo, so
+the latest PDF is always in the tree.
 
-I build the libraries I needed when shipping AI products that couldn't lie to users.
+**Download:** [`resume.pdf`](resume.pdf) · or grab the artifact from the
+[Actions tab](https://github.com/ykstorm/resume/actions/workflows/build.yml).
 
-Open-source toolkit — all Apache 2.0:
+---
 
-- 🪨 [Anchor](https://github.com/ykstorm/anchor) — Provenance-first RAG with cosine-floor refusal. Returns refused: true when similarity falls below 0.30. [Live playground](https://anchor-iota-ten.vercel.app/playground).
-- ⚡️ [Goldset](https://github.com/ykstorm/goldset) — Three-runner AI eval framework as a GitHub Action. PR comment diffs the delta, blocks merge on regression. Published to npm + Marketplace.
-- 🚦 [Tripwire](https://github.com/ykstorm/tripwire) — Mid-stream LLM safety. Token-by-token rule engine, sub-millisecond abort on rule trip.
-- 📊 [Quickdraw](https://github.com/ykstorm/quickdraw) — LLM streaming benchmark CLI. TTFT, tokens/sec, $/1K. Nightly bench against OpenAI + Anthropic.
-- ☸️ [Stackup](https://github.com/ykstorm/stackup) — Production-style Kubernetes locally in 10 minutes. ArgoCD + Argo Rollouts + Grafana via one make up.
-- 💻 [Codecraft](https://github.com/ykstorm/codecraft-ai) — In-browser IDE with real Node.js via WebContainers + local Ollama. [Live](https://codecraft-ai.vercel.app).
+## Edit + build
 
-On npm: [@ykstormsorg](https://www.npmjs.com/~ykstormsorg) — goldset, quickdraw, tripwire
+1. Edit `resume.typ`.
+2. Push to `main`.
+3. Actions installs the Typst binary, runs `typst compile resume.typ resume.pdf`,
+   uploads the PDF as an artifact, and commits it back to the repo.
 
-Currently building: Backend Platform Module Suite — BullMQ-backed idempotent job queue + retry-safe webhook receiver + Terraform module.
+No local toolchain required.
 
-Open to: Backend platform roles · AI infra contracts
+Local build, if you want it:
 
-📍 [lakshyaraj-dev.vercel.app](https://lakshyaraj-dev.vercel.app) · 📧 raolakshyaraj@gmail.com · 🐦 [@ykstorm](https://x.com/ykstorm)
+```bash
+# one-shot
+typst compile resume.typ resume.pdf
+
+# live preview while editing
+typst watch resume.typ
+```
+
+Install Typst from [github.com/typst/typst](https://github.com/typst/typst) or
+`brew install typst` / `winget install Typst.Typst`.
+
+---
+
+## What's in the resume
+
+- Summary — backend engineer, AI infrastructure, DevOps
+- Skills — tagged, grouped by area
+- Open source — anchor, tripwire, goldset, quickdraw, stackup, codecraft-ai (all Apache 2.0)
+- Experience — sole engineer on Homesty.ai
+- Education — Manipal University Jaipur, B.Tech Computer Science, graduating 2026
+
+---
+
+## Stack
+
+- **Typst** — `typst compile`, `us-letter`, Liberation Sans / DejaVu fonts via `#set text`
+- **GitHub Actions** — `.github/workflows/build.yml`, triggers on push to `main`/`master`
+- Single-column flow so ATS parsers read it cleanly
+
+---
+
+## License
+
+Content (the resume itself): all rights reserved.
+Build pipeline (workflow + Typst config): MIT.
