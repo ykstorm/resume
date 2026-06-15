@@ -80,10 +80,14 @@ Backend-focused engineer building production AI infrastructure. Four published n
 
 == Open-Source Projects
 
+#project-header("Anvil", "Creator") · #link("https://github.com/ykstorm/anvil")[github.com/ykstorm/anvil]
+- Idempotent webhook → BullMQ worker pipeline: HMAC-SHA256 constant-time verify, dedupe by `sha256(signature + payload)`, retry backoff [1s, 5s, 30s, 5m], dead-letter replay via a separate consumer.
+- Five design contracts proven by tests in CI (Redis-backed). Ships a Terraform module + Helm chart. Published as `\u{40}ykstormsorg/anvil` v0.1.0 on npm with build provenance.
+#h(0pt) #tag[TypeScript] #tag[BullMQ] #tag[Redis] #tag[Express] #tag[Terraform] #tag[Helm]
+#v(0.3em)
 #project-header("Goldset", "Creator · Maintainer") · #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset]
 - Three-runner AI eval framework (goldenDataset · llmJudge · structural assertions) shipped as a public GitHub Action.
 - PR comment diffs the delta on every push; structural-assertion failures block merge.
-- Single bundled 938 KB dist/action.cjs (esbuild) — zero install at consumer side.
 - Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm and listed on GitHub Marketplace (Continuous Integration).
 #h(0pt) #tag[TypeScript] #tag[esbuild] #tag[OpenAI] #tag[Anthropic] #tag[GitHub Actions]
 #v(0.3em)
@@ -119,10 +123,6 @@ Backend-focused engineer building production AI infrastructure. Four published n
 #project-header("Codecraft", "Creator") · #link("https://codecraft-ai-tau.vercel.app")[codecraft-ai-tau.vercel.app]
 - Boots a real Next.js dev server inside the browser tab via WebContainers — no backend, no local install. The whole cross-origin-isolation (COOP/COEP) boundary is what makes `SharedArrayBuffer` and the in-tab runtime work.
 #h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Next.js] #tag[COOP/COEP]
-
-== In Progress
-
-*Anvil* — Idempotent webhook → BullMQ worker pipeline: HMAC-SHA256 verify, dedupe, exponential backoff, dead-letter replay. Terraform module (Redis + worker pool) + Helm chart. Targeting backend-platform roles at Supabase, Trigger.dev, Razorpay-tier.
 
 == Freelance Work
 
