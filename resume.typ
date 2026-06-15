@@ -51,7 +51,7 @@
 
 == Summary
 
-Backend-focused engineer building production AI infrastructure. Four published npm packages (#link("https://www.npmjs.com/package/@ykstormsorg/goldset")[\u{40}ykstormsorg/goldset], #link("https://www.npmjs.com/package/@ykstormsorg/quickdraw")[quickdraw], #link("https://www.npmjs.com/package/@ykstormsorg/tripwire")[tripwire], #link("https://www.npmjs.com/package/@ykstormsorg/anvil")[anvil] — the last with npm build provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action]. Patterns from a solo production AI deployment, extracted into seven open-source repos: refusal-first RAG, mid-stream guardrails, an eval harness, a streaming benchmark, a GitOps Kubernetes lab, an in-browser runtime, and an idempotent webhook-to-queue pipeline.
+Backend-focused engineer building production AI infrastructure. Four published npm packages (#link("https://www.npmjs.com/package/@ykstormsorg/goldset")[\u{40}ykstormsorg/goldset], #link("https://www.npmjs.com/package/@ykstormsorg/quickdraw")[quickdraw], #link("https://www.npmjs.com/package/@ykstormsorg/tripwire")[tripwire], #link("https://www.npmjs.com/package/@ykstormsorg/anvil")[anvil] — the last with npm build provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action]. Patterns from a solo production AI deployment, extracted into seven open-source repos spanning RAG, LLM safety, eval, benchmarking, Kubernetes/GitOps, and webhook reliability.
 
 == Technical Skills
 
@@ -93,17 +93,14 @@ Backend-focused engineer building production AI infrastructure. Four published n
 #v(0.3em)
 #project-header("Anchor", "Creator") · #link("https://anchor-iota-ten.vercel.app/playground")[anchor-iota-ten.vercel.app/playground]
 - Provenance-first RAG layer with cosine-floor refusal. Returns chunks when similarity >= 0.30; returns refused: true and zero chunks below floor.
-- Idempotent upsert keyed on (sourceType, sourceId) — safe to re-run without duplicates.
 - Live playground renders the retrieval decision — chunks above the floor, or an explicit refusal — for any query.
 - Adaptive K per query intent, with a provenance array on every response so answers are traceable to source.
 #h(0pt) #tag[Postgres + pgvector] #tag[Prisma 7] #tag[Next.js 15] #tag[OpenAI embeddings]
 
 #v(0.3em)
 #project-header("Tripwire", "Creator") · #link("https://github.com/ykstorm/tripwire")[github.com/ykstorm/tripwire]
-- Mid-stream LLM safety. Token-by-token rule engine aborts the response stream on rule trip.
-- Sub-millisecond decision per chunk; zero buffering on happy path.
-- User never sees a bad response finish rendering — abort happens before the next token reaches them.
-- Published as `\u{40}ykstormsorg/tripwire` on npm.
+- Mid-stream LLM safety. Token-by-token rule engine aborts the response stream on rule trip, before the bad token reaches the user.
+- Sub-millisecond decision per chunk; zero buffering on happy path. Published as `\u{40}ykstormsorg/tripwire` on npm.
 #h(0pt) #tag[TypeScript] #tag[Node async iterators] #tag[streaming abort]
 
 #v(0.3em)
