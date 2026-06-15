@@ -39,9 +39,9 @@
   ],
   [
     #text(size: 9pt, fill: muted)[
-      Mumbai → Remote \
-      #link("mailto:balveer767@gmail.com")[balveer767\u{40}gmail.com] \
-      #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[GitHub] · #link("https://linkedin.com/in/lakshyaraj")[LinkedIn] · #link("https://www.npmjs.com/~ykstormsorg")[npm]
+      Jaipur, India · Remote \
+      #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj\u{40}gmail.com] \
+      #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[GitHub] · #link("https://linkedin.com/in/lakshyaraj-singh-rao-840273152")[LinkedIn] · #link("https://www.npmjs.com/~ykstormsorg")[npm]
     ]
   ]
 )
@@ -51,7 +51,7 @@
 
 == Summary
 
-Backend-focused engineer building production AI infrastructure. Three published npm packages (#link("https://www.npmjs.com/package/@ykstormsorg/goldset")[\u{40}ykstormsorg/goldset], #link("https://www.npmjs.com/package/@ykstormsorg/quickdraw")[quickdraw], #link("https://www.npmjs.com/package/@ykstormsorg/tripwire")[tripwire]) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action]. Pulled production patterns from a freelance commission-AI deployment into six Apache-2.0 OSS repositories covering RAG, mid-stream guardrails, eval harnesses, streaming benchmarks, k8s, and in-browser IDE.
+Backend-focused engineer building production AI infrastructure. Four published npm packages (#link("https://www.npmjs.com/package/@ykstormsorg/goldset")[\u{40}ykstormsorg/goldset], #link("https://www.npmjs.com/package/@ykstormsorg/quickdraw")[quickdraw], #link("https://www.npmjs.com/package/@ykstormsorg/tripwire")[tripwire], #link("https://www.npmjs.com/package/@ykstormsorg/anvil")[anvil] — the last with npm build provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action]. Patterns from a solo production AI deployment, extracted into seven open-source repos: refusal-first RAG, mid-stream guardrails, an eval harness, a streaming benchmark, a GitOps Kubernetes lab, an in-browser runtime, and an idempotent webhook-to-queue pipeline.
 
 == Technical Skills
 
@@ -90,8 +90,8 @@ Backend-focused engineer building production AI infrastructure. Three published 
 #project-header("Anchor", "Creator") · #link("https://anchor-iota-ten.vercel.app/playground")[anchor-iota-ten.vercel.app/playground]
 - Provenance-first RAG layer with cosine-floor refusal. Returns chunks when similarity >= 0.30; returns refused: true and zero chunks below floor.
 - Idempotent upsert keyed on (sourceType, sourceId) — safe to re-run without duplicates.
-- Live demo with 60 embeddings across 16 RERA-verified real-estate projects.
-- Adaptive K (precision queries -> K=6, recall queries -> K=10) with provenance array on every response.
+- Live playground renders the retrieval decision — chunks above the floor, or an explicit refusal — for any query.
+- Adaptive K per query intent, with a provenance array on every response so answers are traceable to source.
 #h(0pt) #tag[Postgres + pgvector] #tag[Prisma 7] #tag[Next.js 15] #tag[OpenAI embeddings]
 
 #v(0.3em)
@@ -116,10 +116,9 @@ Backend-focused engineer building production AI infrastructure. Three published 
 #h(0pt) #tag[Kubernetes] #tag[ArgoCD] #tag[Helm] #tag[kind] #tag[Grafana]
 
 #v(0.3em)
-#project-header("Codecraft", "Creator · In Build") · #link("https://codecraft-ai.vercel.app")[codecraft-ai.vercel.app]
-- In-browser IDE prototype. WebContainers running real Node.js + Monaco editor + Ollama for local AI completions.
-- Landing + auth shell deployed; IDE workspace modules in active build.
-#h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Next.js] #tag[Ollama]
+#project-header("Codecraft", "Creator") · #link("https://codecraft-ai-tau.vercel.app")[codecraft-ai-tau.vercel.app]
+- Boots a real Next.js dev server inside the browser tab via WebContainers — no backend, no local install. The whole cross-origin-isolation (COOP/COEP) boundary is what makes `SharedArrayBuffer` and the in-tab runtime work.
+#h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Next.js] #tag[COOP/COEP]
 
 == In Progress
 
@@ -128,10 +127,9 @@ Backend-focused engineer building production AI infrastructure. Three published 
 == Freelance Work
 
 #project-header("Homesty.ai", "Solo Backend & AI Engineer") · Remote · Mar 2025 – Present
-- Built production buyer-side AI assistant on Next.js 15 + Postgres + pgvector + Prisma + GPT-4o + Claude streaming.
-- Implemented 8-stage chat pipeline: per-IP rate limit -> intent classifier -> RAG retrieval -> streaming -> post-stream audit -> DB log.
-- Designed 5-layer anti-fabrication architecture; the patterns shipped as the Anchor + Tripwire OSS repositories.
-- 16 RERA-verified projects indexed across two Ahmedabad micro-markets.
+- Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry.
+- Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice.
+- Hardened those two patterns into standalone OSS the rest of the industry can use: Anchor (provenance RAG) and Tripwire (streaming safety).
 #h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
 
 == Education
@@ -141,9 +139,9 @@ Relevant coursework: Distributed Systems, Database Internals, Networks, ML Found
 
 == Recognition
 
-- Three npm packages published under #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] scope
+- Four npm packages under #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] — Anvil published with npm build provenance (signed on GitHub Actions)
 - Goldset listed on GitHub Marketplace (Continuous Integration)
-- Six Apache 2.0 open-source repositories with working demos
+- Seven open-source repositories, each with a working demo and green CI
 - Portfolio with live npm + GitHub activity at #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app]
 
 #v(0.5em)
