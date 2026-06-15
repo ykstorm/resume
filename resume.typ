@@ -1,5 +1,5 @@
-#set page(paper: "us-letter", margin: (x: 0.5in, y: 0.4in))
-#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9pt)
+#set page(paper: "us-letter", margin: (x: 0.45in, y: 0.34in))
+#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 8.8pt)
 #set par(justify: true, leading: 0.5em)
 
 #let accent = rgb("#1a73e8")
@@ -121,14 +121,12 @@ Backend-focused engineer building production AI infrastructure. Four published n
 
 #project-header("Homesty.ai", "Solo Backend & AI Engineer") · Remote · Mar 2025 – Present
 - Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry.
-- Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice.
-- Hardened those two patterns into standalone OSS the rest of the industry can use: Anchor (provenance RAG) and Tripwire (streaming safety).
+- Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
 #h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
 
 == Education
 
-*Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026 \
-Relevant coursework: Distributed Systems, Database Internals, Networks, ML Foundations
+*Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026 · Coursework: Distributed Systems, Database Internals, Networks, ML Foundations
 
 #v(0.5em)
 #align(center)[
