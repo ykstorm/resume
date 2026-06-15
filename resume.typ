@@ -105,7 +105,7 @@ Backend-focused engineer building production AI infrastructure. Four published n
 
 #v(0.3em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
-- LLM streaming benchmark CLI — TTFT, tokens/sec, $/1K. Nightly run across OpenAI + Anthropic, diffs vs. baseline. Published as `\u{40}ykstormsorg/quickdraw` on npm.
+- LLM streaming benchmark CLI — TTFT, tokens/sec, cost per 1K tokens. Nightly run across OpenAI + Anthropic, diffs vs. baseline. Published as `\u{40}ykstormsorg/quickdraw` on npm.
 #h(0pt) #tag[TypeScript] #tag[OpenAI SDK] #tag[Anthropic SDK] #tag[GHA cron]
 
 #v(0.3em)
