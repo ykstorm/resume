@@ -1,6 +1,6 @@
-#set page(paper: "us-letter", margin: (x: 0.55in, y: 0.5in))
-#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9.5pt)
-#set par(justify: true, leading: 0.55em)
+#set page(paper: "us-letter", margin: (x: 0.5in, y: 0.4in))
+#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9.25pt)
+#set par(justify: true, leading: 0.5em)
 
 #let accent = rgb("#1a73e8")
 #let muted = rgb("#666666")
