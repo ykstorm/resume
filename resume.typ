@@ -130,13 +130,6 @@ Backend-focused engineer building production AI infrastructure. Four published n
 *Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026 \
 Relevant coursework: Distributed Systems, Database Internals, Networks, ML Foundations
 
-== Recognition
-
-- Four npm packages under #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] — Anvil published with npm build provenance (signed on GitHub Actions)
-- Goldset listed on GitHub Marketplace (Continuous Integration)
-- Seven open-source repositories, each with a working demo and green CI
-- Portfolio with live npm + GitHub activity at #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app]
-
 #v(0.5em)
 #align(center)[
   #text(size: 8pt, fill: muted)[
