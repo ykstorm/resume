@@ -1,5 +1,5 @@
 #set page(paper: "us-letter", margin: (x: 0.45in, y: 0.34in))
-#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 8.8pt)
+#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 8.5pt)
 #set par(justify: true, leading: 0.5em)
 
 #let accent = rgb("#1a73e8")
@@ -51,7 +51,7 @@
 
 == Summary
 
-Backend-focused engineer building production AI infrastructure. Four published npm packages (#link("https://www.npmjs.com/package/@ykstormsorg/goldset")[\u{40}ykstormsorg/goldset], #link("https://www.npmjs.com/package/@ykstormsorg/quickdraw")[quickdraw], #link("https://www.npmjs.com/package/@ykstormsorg/tripwire")[tripwire], #link("https://www.npmjs.com/package/@ykstormsorg/anvil")[anvil] — the last with npm build provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action]. Patterns from a solo production AI deployment, extracted into seven open-source repos spanning RAG, LLM safety, eval, benchmarking, Kubernetes/GitOps, and webhook reliability.
+Backend-focused engineer building production AI infrastructure. Four #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] npm packages (one with build provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action]. Patterns from a solo production AI deployment, extracted into seven open-source repos: RAG, LLM safety, eval, benchmarking, Kubernetes/GitOps, webhook reliability.
 
 == Technical Skills
 
