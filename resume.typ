@@ -1,5 +1,5 @@
 #set page(paper: "us-letter", margin: (x: 0.5in, y: 0.4in))
-#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9.25pt)
+#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9pt)
 #set par(justify: true, leading: 0.5em)
 
 #let accent = rgb("#1a73e8")
@@ -84,36 +84,35 @@ Backend-focused engineer building production AI infrastructure. Four published n
 - Idempotent webhook → BullMQ worker pipeline: HMAC-SHA256 constant-time verify, dedupe by `sha256(signature + payload)`, retry backoff [1s, 5s, 30s, 5m], dead-letter replay via a separate consumer.
 - Five design contracts proven by tests in CI (Redis-backed). Ships a Terraform module + Helm chart. Published as `\u{40}ykstormsorg/anvil` v0.1.0 on npm with build provenance.
 #h(0pt) #tag[TypeScript] #tag[BullMQ] #tag[Redis] #tag[Express] #tag[Terraform] #tag[Helm]
-#v(0.3em)
+#v(0.1em)
 #project-header("Goldset", "Creator · Maintainer") · #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset]
 - Three-runner AI eval framework (goldenDataset · llmJudge · structural assertions) shipped as a public GitHub Action.
-- PR comment diffs the delta on every push; structural-assertion failures block merge.
-- Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm and listed on GitHub Marketplace (Continuous Integration).
+- PR comment diffs the delta on every push; structural-assertion failures block merge. Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm + GitHub Marketplace.
 #h(0pt) #tag[TypeScript] #tag[esbuild] #tag[OpenAI] #tag[Anthropic] #tag[GitHub Actions]
-#v(0.3em)
+#v(0.1em)
 #project-header("Anchor", "Creator") · #link("https://anchor-iota-ten.vercel.app/playground")[anchor-iota-ten.vercel.app/playground]
 - Provenance-first RAG layer with cosine-floor refusal. Returns chunks when similarity >= 0.30; returns refused: true and zero chunks below floor.
 - Live playground renders the retrieval decision — chunks above the floor, or an explicit refusal — for any query.
 - Adaptive K per query intent, with a provenance array on every response so answers are traceable to source.
 #h(0pt) #tag[Postgres + pgvector] #tag[Prisma 7] #tag[Next.js 15] #tag[OpenAI embeddings]
 
-#v(0.3em)
+#v(0.1em)
 #project-header("Tripwire", "Creator") · #link("https://github.com/ykstorm/tripwire")[github.com/ykstorm/tripwire]
 - Mid-stream LLM safety. Token-by-token rule engine aborts the response stream on rule trip, before the bad token reaches the user.
 - Sub-millisecond decision per chunk; zero buffering on happy path. Published as `\u{40}ykstormsorg/tripwire` on npm.
 #h(0pt) #tag[TypeScript] #tag[Node async iterators] #tag[streaming abort]
 
-#v(0.3em)
+#v(0.1em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
 - LLM streaming benchmark CLI — TTFT, tokens/sec, cost per 1K tokens. Nightly run across OpenAI + Anthropic, diffs vs. baseline. Published as `\u{40}ykstormsorg/quickdraw` on npm.
 #h(0pt) #tag[TypeScript] #tag[OpenAI SDK] #tag[Anthropic SDK] #tag[GHA cron]
 
-#v(0.3em)
+#v(0.1em)
 #project-header("Stackup", "Creator") · #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
 - Production-shape Kubernetes on a laptop in 10 minutes (single `make up`): ArgoCD app-of-apps + Argo Rollouts canary + kube-prometheus-stack on a kind cluster.
 #h(0pt) #tag[Kubernetes] #tag[ArgoCD] #tag[Helm] #tag[kind] #tag[Grafana]
 
-#v(0.3em)
+#v(0.1em)
 #project-header("Codecraft", "Creator") · #link("https://codecraft-ai-tau.vercel.app")[codecraft-ai-tau.vercel.app]
 - Boots a real Next.js dev server inside the browser tab via WebContainers — no backend, no local install. The whole cross-origin-isolation (COOP/COEP) boundary is what makes `SharedArrayBuffer` and the in-tab runtime work.
 #h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Next.js] #tag[COOP/COEP]
