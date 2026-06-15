@@ -123,7 +123,7 @@ Backend-focused engineer building production AI infrastructure. Three published 
 
 == In Progress
 
-*Anvil — Backend Platform Module Suite* — Idempotent BullMQ job queue + retry-safe webhook receiver with exponential backoff and dead-letter handling + Terraform module (Postgres + Redis + worker pool) + Helm chart. Targeting backend-platform roles at Supabase, Trigger.dev, Razorpay-tier.
+*Anvil* — Idempotent webhook → BullMQ worker pipeline: HMAC-SHA256 verify, dedupe, exponential backoff, dead-letter replay. Terraform module (Redis + worker pool) + Helm chart. Targeting backend-platform roles at Supabase, Trigger.dev, Razorpay-tier.
 
 == Freelance Work
 
