@@ -7,8 +7,8 @@
 #let tag-fill = rgb("#f0f4f8")
 #let tag-stroke = rgb("#d9e1ec")
 
-#show heading.where(level: 2): it => block(below: 0.4em, above: 0.8em)[
-  #text(size: 11pt, weight: "bold", fill: accent, tracking: 0.8pt, upper(it.body))
+#show heading.where(level: 2): it => block(below: 0.3em, above: 0.5em)[
+  #text(size: 10.5pt, weight: "bold", fill: accent, tracking: 0.8pt, upper(it.body))
   #v(-0.4em)
   #line(length: 100%, stroke: 0.5pt + accent)
 ]
@@ -126,7 +126,7 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 
 == Education
 
-*Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026 · Coursework: Distributed Systems, Database Internals, Networks, ML Foundations
+*Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026
 
 #v(0.5em)
 #align(center)[
