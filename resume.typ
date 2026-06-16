@@ -128,9 +128,10 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 
 *Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026
 
-#v(0.5em)
-#align(center)[
-  #text(size: 8pt, fill: muted)[
-    Latest version: #link("https://github.com/ykstorm/resume")[github.com/ykstorm/resume] · Apache 2.0
+#place(bottom)[
+  #align(center)[
+    #text(size: 8pt, fill: muted)[
+      Latest version: #link("https://github.com/ykstorm/resume")[github.com/ykstorm/resume] · Apache 2.0
+    ]
   ]
 ]
