@@ -1,5 +1,5 @@
 #set page(paper: "us-letter", margin: (x: 0.45in, y: 0.34in))
-#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 8.5pt)
+#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 8.3pt)
 #set par(justify: true, leading: 0.5em)
 
 #let accent = rgb("#1a73e8")
@@ -127,7 +127,7 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 == Education
 
 *Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026 \
-CMI Public School, Calicut — CBSE Class XII, 84% · Vidya Kendra, Calicut — CBSE Class X, 94%
+CMI Public School, Calicut (CBSE XII, 84%) · Vidya Kendra, Calicut (CBSE X, 94%)
 
 #place(bottom)[
   #align(center)[
