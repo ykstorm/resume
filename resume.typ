@@ -39,7 +39,7 @@
   ],
   [
     #text(size: 9pt, fill: muted)[
-      Jaipur, India · Remote \
+      Mumbai, India · Open to Bangalore / Remote \
       #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj\u{40}gmail.com] \
       #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[GitHub] · #link("https://linkedin.com/in/lakshyaraj-singh-rao-840273152")[LinkedIn] · #link("https://www.npmjs.com/~ykstormsorg")[npm]
     ]
@@ -119,14 +119,15 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 
 == Freelance Work
 
-#project-header("Homesty.ai", "Solo Backend & AI Engineer") · Remote · Mar 2025 – Present
+#project-header("Homesty.ai", "Solo Backend & AI Engineer") · Remote · Nov 2025 – Present
 - Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry.
 - Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
 #h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
 
 == Education
 
-*Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026
+*Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026 \
+CMI Public School, Calicut — CBSE Class XII, 84% · Vidya Kendra, Calicut — CBSE Class X, 94%
 
 #place(bottom)[
   #align(center)[
