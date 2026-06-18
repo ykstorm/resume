@@ -117,9 +117,9 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 - Boots a real Next.js dev server inside the browser tab via WebContainers — no backend, no local install. The whole cross-origin-isolation (COOP/COEP) boundary is what makes `SharedArrayBuffer` and the in-tab runtime work.
 #h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Next.js] #tag[COOP/COEP]
 
-== Freelance Work
+== Experience
 
-#project-header("Homesty.ai", "Solo Backend & AI Engineer") · Remote · Nov 2025 – Present
+#project-header("Homesty.ai LLP", "Co-Founder & Sole Engineer") · Remote · Nov 2025 – Present
 - Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry.
 - Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
 #h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
