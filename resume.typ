@@ -91,9 +91,8 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 #h(0pt) #tag[TypeScript] #tag[esbuild] #tag[OpenAI] #tag[Anthropic] #tag[GitHub Actions]
 #v(0.1em)
 #project-header("Anchor", "Creator") · #link("https://anchor-iota-ten.vercel.app/playground")[anchor-iota-ten.vercel.app/playground]
-- Provenance-first RAG layer with cosine-floor refusal. Returns chunks when similarity >= 0.30; returns refused: true and zero chunks below floor.
-- Live playground renders the retrieval decision — chunks above the floor, or an explicit refusal — for any query.
-- Adaptive-K retrieval; every returned chunk carries its source id and type, so answers trace back to origin.
+- Provenance-first RAG with cosine-floor refusal. API returns `{ chunks, sources, refused }` — chunks above the floor, refused below, with a deduped sources array per response.
+- Postgres + pgvector via `docker compose up`; one-command quickstart from a clean clone. Live playground renders the retrieval decision for any query.
 #h(0pt) #tag[Postgres + pgvector] #tag[Prisma 7] #tag[Next.js 15] #tag[OpenAI embeddings]
 
 #v(0.1em)
@@ -104,8 +103,8 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 
 #v(0.1em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
-- LLM streaming benchmark — measures TTFT, tokens/sec, and per-model cost across OpenAI + Anthropic. Published as `\u{40}ykstormsorg/quickdraw` on npm.
-#h(0pt) #tag[TypeScript] #tag[OpenAI] #tag[Anthropic] #tag[Benchmarking]
+- LLM streaming benchmark CLI. TTFT, tokens/sec, p50/p95/p99, and cost per 1K across OpenAI + Anthropic. `quickdraw diff` flags regressions between runs. Published as `\u{40}ykstormsorg/quickdraw` v1.0.2 on npm with SLSA build provenance.
+#h(0pt) #tag[TypeScript] #tag[OpenAI] #tag[Anthropic] #tag[CLI]
 
 #v(0.1em)
 #project-header("Stackup", "Creator") · #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
