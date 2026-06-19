@@ -86,14 +86,14 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 #h(0pt) #tag[TypeScript] #tag[BullMQ] #tag[Redis] #tag[Express] #tag[Terraform] #tag[Helm]
 #v(0.1em)
 #project-header("Goldset", "Creator · Maintainer") · #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset]
-- Three-runner AI eval framework (goldenDataset · llmJudge · structural assertions) shipped as a public GitHub Action.
-- PR comment diffs the delta on every push; structural-assertion failures block merge. Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm + GitHub Marketplace.
+- Three eval runners — golden dataset, LLM-as-judge, and structural assertions — packaged as a public GitHub Action.
+- Structural-assertion failures block a merge on regression. Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm + GitHub Marketplace.
 #h(0pt) #tag[TypeScript] #tag[esbuild] #tag[OpenAI] #tag[Anthropic] #tag[GitHub Actions]
 #v(0.1em)
 #project-header("Anchor", "Creator") · #link("https://anchor-iota-ten.vercel.app/playground")[anchor-iota-ten.vercel.app/playground]
 - Provenance-first RAG layer with cosine-floor refusal. Returns chunks when similarity >= 0.30; returns refused: true and zero chunks below floor.
 - Live playground renders the retrieval decision — chunks above the floor, or an explicit refusal — for any query.
-- Adaptive K per query intent, with a provenance array on every response so answers are traceable to source.
+- Adaptive-K retrieval; every returned chunk carries its source id and type, so answers trace back to origin.
 #h(0pt) #tag[Postgres + pgvector] #tag[Prisma 7] #tag[Next.js 15] #tag[OpenAI embeddings]
 
 #v(0.1em)
@@ -104,18 +104,18 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 
 #v(0.1em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
-- LLM streaming benchmark CLI — TTFT, tokens/sec, cost per 1K tokens. Nightly run across OpenAI + Anthropic, diffs vs. baseline. Published as `\u{40}ykstormsorg/quickdraw` on npm.
-#h(0pt) #tag[TypeScript] #tag[OpenAI SDK] #tag[Anthropic SDK] #tag[GHA cron]
+- LLM streaming benchmark — measures TTFT, tokens/sec, and per-model cost across OpenAI + Anthropic. Published as `\u{40}ykstormsorg/quickdraw` on npm.
+#h(0pt) #tag[TypeScript] #tag[OpenAI] #tag[Anthropic] #tag[Benchmarking]
 
 #v(0.1em)
 #project-header("Stackup", "Creator") · #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
-- Production-shape Kubernetes on a laptop in 10 minutes (single `make up`): ArgoCD app-of-apps + Argo Rollouts canary + kube-prometheus-stack on a kind cluster.
+- Kubernetes GitOps lab on a kind cluster: ArgoCD app-of-apps, Argo Rollouts canary, and kube-prometheus-stack. Helm charts + manifests validated in CI.
 #h(0pt) #tag[Kubernetes] #tag[ArgoCD] #tag[Helm] #tag[kind] #tag[Grafana]
 
 #v(0.1em)
 #project-header("Codecraft", "Creator") · #link("https://codecraft-ai-tau.vercel.app")[codecraft-ai-tau.vercel.app]
 - Boots a real Next.js dev server inside the browser tab via WebContainers — no backend, no local install. The whole cross-origin-isolation (COOP/COEP) boundary is what makes `SharedArrayBuffer` and the in-tab runtime work.
-#h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Next.js] #tag[COOP/COEP]
+#h(0pt) #tag[WebContainers] #tag[xterm] #tag[Next.js] #tag[COOP/COEP]
 
 == Experience
 
