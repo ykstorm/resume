@@ -118,7 +118,7 @@ I build the reliability layer that lets AI systems run in production without sup
 
 == Experience
 
-#project-header("Homesty.ai LLP", "Co-Founder & Sole Engineer") · Remote · Nov 2025 – Present
+#project-header(link("https://homesty.ai")[Homesty.ai LLP], "Co-Founder & Sole Engineer") · Remote · Nov 2025 – Present
 - Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry.
 - Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
 #h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
@@ -126,7 +126,9 @@ I build the reliability layer that lets AI systems run in production without sup
 == Education
 
 *Manipal University Jaipur* — B.Tech, Computer Science · Graduating 2026 \
-CMI Public School, Calicut (CBSE XII, 84%) · Vidya Kendra, Calicut (CBSE X, 94%)
+#text(size: 8pt, fill: muted)[Coursework: Distributed Systems · Database Internals · Networks · Machine Learning Foundations.] \
+*Devagiri CMI Public School*, Calicut — CBSE Class XII, 84% \
+*Vidya Kendra*, Calicut — CBSE Class X, 94%
 
 #place(bottom)[
   #align(center)[
