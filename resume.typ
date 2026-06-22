@@ -51,7 +51,7 @@
 
 == Summary
 
-Backend-focused engineer building production AI infrastructure. Four #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] npm packages (one with build provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action]. Patterns from a solo production AI deployment, extracted into seven open-source repos: RAG, LLM safety, eval, benchmarking, Kubernetes/GitOps, webhook reliability.
+I build the reliability layer that lets AI systems run in production without supervision — refusal when retrieval fails, abort when output goes off-script, eval-gating before merge, idempotency under webhook re-delivery. Co-Founder and sole engineer on Homesty.ai LLP since Nov 2025, serving real traffic on Next.js 15 + pgvector + GPT-4o. Four #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] npm packages (one with SLSA provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action] — extracted from what production actually broke.
 
 == Technical Skills
 
@@ -81,39 +81,39 @@ Backend-focused engineer building production AI infrastructure. Four #link("http
 == Open-Source Projects
 
 #project-header("Anvil", "Creator") · #link("https://github.com/ykstorm/anvil")[github.com/ykstorm/anvil]
-- Idempotent webhook → BullMQ worker pipeline: HMAC-SHA256 constant-time verify, dedupe by `sha256(signature + payload)`, retry backoff [1s, 5s, 30s, 5m], dead-letter replay via a separate consumer.
-- Five design contracts proven by tests in CI (Redis-backed). Ships a Terraform module + Helm chart. Published as `\u{40}ykstormsorg/anvil` v0.1.0 on npm with build provenance.
+- Stripe sends the same webhook three times when the internet hiccups, and your worker double-charges users. *Anvil is the dedup + retry + dead-letter pipeline that handles every webhook source (Stripe, GitHub, Twilio) so your worker never repeats.*
+- Drop-in library, `\u{40}ykstormsorg/anvil` v0.1.0 on npm with build provenance. Ships a Terraform module for production and a Helm chart for Kubernetes. Five design contracts proven by tests in CI.
 #h(0pt) #tag[TypeScript] #tag[BullMQ] #tag[Redis] #tag[Express] #tag[Terraform] #tag[Helm]
 #v(0.1em)
 #project-header("Goldset", "Creator · Maintainer") · #link("https://github.com/ykstorm/goldset")[github.com/ykstorm/goldset]
-- Three eval runners — golden dataset, LLM-as-judge, and structural assertions — packaged as a public GitHub Action with a pluggable judge (OpenAI / Anthropic).
-- Runs the suite on every PR, posts a delta-vs-base comment, and blocks the merge on regression. Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm + GitHub Marketplace.
+- "Did my prompt change break anything?" — today you eyeball outputs in a notebook and ship a guess. *Goldset is CI for AI: three eval runners (golden answers, LLM judge, structural assertions) run on every PR, post a delta-vs-base comment, and block merge on regression.*
+- Pluggable OpenAI / Anthropic judge. Published as `\u{40}ykstormsorg/goldset` v0.2.0 on npm + GitHub Marketplace.
 #h(0pt) #tag[TypeScript] #tag[esbuild] #tag[OpenAI] #tag[Anthropic] #tag[GitHub Actions]
 #v(0.1em)
 #project-header("Anchor", "Creator") · #link("https://anchor-iota-ten.vercel.app/playground")[anchor-iota-ten.vercel.app/playground]
-- Provenance-first RAG with cosine-floor refusal. API returns `{ chunks, sources, refused }` — chunks above the floor, refused below, with a deduped sources array per response.
-- Postgres + pgvector via `docker compose up`; one-command quickstart from a clean clone. Live playground renders the retrieval decision for any query.
+- Every RAG demo breaks when retrieval finds nothing useful — the AI just makes things up. *Anchor is the RAG layer that refuses instead of guessing: above the similarity floor it returns chunks with provenance; below, it returns `refused: true`.*
+- Built into a real-estate production app where a hallucination is a lawsuit. Live playground, one-command Docker setup.
 #h(0pt) #tag[Postgres + pgvector] #tag[Prisma 7] #tag[Next.js 15] #tag[OpenAI embeddings]
 
 #v(0.1em)
 #project-header("Tripwire", "Creator") · #link("https://github.com/ykstorm/tripwire")[github.com/ykstorm/tripwire]
-- Mid-stream LLM safety. Token-by-token rule engine aborts the response stream on rule trip, before the bad token reaches the user.
-- Sub-millisecond decision per chunk; zero buffering on happy path. Ships an OpenAI-compatible sidecar proxy (`POST /v1/chat/completions`) that streams through the guard and aborts mid-stream on a rule trip. Published as `\u{40}ykstormsorg/tripwire` on npm.
+- Once an LLM token reaches the user it's already wrong — post-hoc moderation runs after the damage. *Tripwire watches each token mid-stream and kills the response on rule trip: PII leaks, prompt-injection, fabricated facts.*
+- Drop in as an OpenAI-compatible proxy (change one URL) or import as a library. Sub-millisecond per chunk; zero buffering on the happy path. Published as `\u{40}ykstormsorg/tripwire` on npm.
 #h(0pt) #tag[TypeScript] #tag[Node async iterators] #tag[streaming abort]
 
 #v(0.1em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
-- LLM streaming benchmark CLI. TTFT, tokens/sec, p50/p95/p99, and cost per 1K across OpenAI + Anthropic. `quickdraw diff` flags regressions between runs. Published as `\u{40}ykstormsorg/quickdraw` v1.0.2 on npm with SLSA build provenance.
+- Every AI provider claims to be "fastest" — but fast on what prompts, what network, what time of day? *Quickdraw measures real LLM streaming on your prompts: TTFT, tokens/sec, p50/p95/p99, and cost per 1K across OpenAI + Anthropic.* `quickdraw diff` catches regressions between nightly runs. Published as `\u{40}ykstormsorg/quickdraw` v1.0.2 on npm with SLSA build provenance.
 #h(0pt) #tag[TypeScript] #tag[OpenAI] #tag[Anthropic] #tag[CLI]
 
 #v(0.1em)
 #project-header("Stackup", "Creator") · #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
-- Kubernetes GitOps lab on a kind cluster: ArgoCD app-of-apps, Argo Rollouts canary, and kube-prometheus-stack. Helm charts + manifests validated in CI.
+- Production Kubernetes patterns cost \$200+/month on cloud, and most "K8s tutorials" stop at `kubectl run nginx`. *Stackup runs the full production stack on your laptop in ~15 minutes: ArgoCD GitOps app-of-apps, Argo Rollouts canary with real Prometheus success-rate analysis, kube-prometheus-stack monitoring.* Real progressive delivery, free.
 #h(0pt) #tag[Kubernetes] #tag[ArgoCD] #tag[Helm] #tag[kind] #tag[Grafana]
 
 #v(0.1em)
 #project-header("Codecraft", "Creator") · #link("https://codecraft-ai-tau.vercel.app")[codecraft-ai-tau.vercel.app]
-- Boots a real Vite + React dev server inside the browser tab via WebContainers — no backend, no install. Editable Monaco wired to the WebContainer FS (debounced writes, sub-2s HMR); an interactive xterm runs real shell commands; an IndexedDB snapshot cache drops repeat-visit boot under 20s. The COOP/COEP cross-origin-isolation boundary is what makes `SharedArrayBuffer` and the in-tab runtime work.
+- "Try-it" links die when users have to install Node, clone the repo, and run `npm install`. *Codecraft runs a real Vite + React dev server inside the browser tab — edit code in Monaco, type `npm install dayjs` in the terminal, watch the preview hot-reload in under 2 seconds.* No backend, no install; the COOP/COEP cross-origin-isolation boundary unlocks `SharedArrayBuffer`, and an IndexedDB snapshot cache drops repeat-visit boots under 20s.
 #h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Vite] #tag[COOP/COEP]
 
 == Experience
