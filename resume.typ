@@ -35,12 +35,12 @@
   [
     #text(size: 22pt, weight: "bold")[Lakshyaraj Singh Rao] \
     #v(0.04em)
-    #text(size: 10pt, fill: accent)[Backend Engineer · AI Infrastructure · Full-Stack · DevOps]
+    #text(size: 10pt, fill: accent)[#link("https://github.com/ykstorm/anvil")[Backend Engineer] · #link("https://github.com/ykstorm/tripwire")[AI Infrastructure] · #link("https://codecraft-ai-tau.vercel.app")[Full-Stack] · #link("https://github.com/ykstorm/stackup")[DevOps]]
   ],
   [
     #text(size: 9pt, fill: muted)[
       Mumbai, India · Open to Bangalore / Remote \
-      #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj\u{40}gmail.com] \
+      #link("https://homesty.ai")[homesty.ai] · #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj\u{40}gmail.com] \
       #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[GitHub] · #link("https://linkedin.com/in/lakshyaraj-singh-rao-840273152")[LinkedIn] · #link("https://www.npmjs.com/~ykstormsorg")[npm]
     ]
   ]
@@ -53,30 +53,11 @@
 
 I build the reliability layer that lets AI systems run in production without supervision — refusal when retrieval fails, abort when output goes off-script, eval-gating before merge, idempotency under webhook re-delivery. Co-Founder and sole engineer on Homesty.ai LLP since Nov 2025, serving real traffic on Next.js 15 + pgvector + GPT-4o. Four #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] npm packages (one with SLSA provenance) and a public #link("https://github.com/marketplace/actions/goldset-ai-eval-gate")[GitHub Marketplace Action] — extracted from what production actually broke.
 
-== Technical Skills
+== Experience
 
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  gutter: 1.2em,
-  [
-    *Languages* \
-    TypeScript · JavaScript \
-    Python · SQL \
-    Rust (learning)
-  ],
-  [
-    *Backend / Data* \
-    Node.js · Express · Next.js \
-    PostgreSQL · pgvector \
-    Prisma 7 · Redis · BullMQ
-  ],
-  [
-    *Infra / AI* \
-    Docker · Kubernetes · Helm \
-    Terraform · GitHub Actions · Vercel \
-    OpenAI · Anthropic · Ollama
-  ]
-)
+#project-header(link("https://homesty.ai")[Homesty.ai LLP], "Co-Founder & Sole Engineer") · Remote · Nov 2025 – Present
+- Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry. Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
+#h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
 
 == Open-Source Projects
 
@@ -108,11 +89,30 @@ I build the reliability layer that lets AI systems run in production without sup
 - Production Kubernetes patterns cost \$200+/month on cloud, and most "K8s tutorials" stop at `kubectl run nginx`. *Stackup runs the full production stack on your laptop in ~15 minutes: ArgoCD GitOps app-of-apps, Argo Rollouts canary with real Prometheus success-rate analysis (verified live: 25→50→75→100% with the ≥0.95 gate passing 3×), kube-prometheus-stack monitoring.* Real progressive delivery, free.
 #h(0pt) #tag[Kubernetes] #tag[ArgoCD] #tag[Helm] #tag[kind] #tag[Grafana]
 
-== Experience
+== Technical Skills
 
-#project-header(link("https://homesty.ai")[Homesty.ai LLP], "Co-Founder & Sole Engineer") · Remote · Nov 2025 – Present
-- Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry. Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
-#h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  gutter: 1.2em,
+  [
+    *Languages* \
+    TypeScript · JavaScript \
+    Python · SQL \
+    Rust (learning)
+  ],
+  [
+    *Backend / Data* \
+    Node.js · Express · Next.js \
+    PostgreSQL · pgvector \
+    Prisma 7 · Redis · BullMQ
+  ],
+  [
+    *Infra / AI* \
+    Docker · Kubernetes · Helm \
+    Terraform · GitHub Actions · Vercel \
+    OpenAI · Anthropic · Ollama
+  ]
+)
 
 == Education
 
