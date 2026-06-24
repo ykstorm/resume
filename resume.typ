@@ -1,5 +1,5 @@
 #set page(paper: "us-letter", margin: (x: 0.45in, y: 0.34in))
-#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 8.3pt)
+#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 8.0pt)
 #set par(justify: true, leading: 0.4em)
 
 #let accent = rgb("#1a73e8")
@@ -7,7 +7,7 @@
 #let tag-fill = rgb("#f0f4f8")
 #let tag-stroke = rgb("#d9e1ec")
 
-#show heading.where(level: 2): it => block(below: 0.3em, above: 0.5em)[
+#show heading.where(level: 2): it => block(below: 0.2em, above: 0.32em)[
   #text(size: 10.5pt, weight: "bold", fill: accent, tracking: 0.8pt, upper(it.body))
   #v(-0.4em)
   #line(length: 100%, stroke: 0.5pt + accent)
@@ -111,8 +111,7 @@ I build the reliability layer that lets AI systems run in production without sup
 == Experience
 
 #project-header(link("https://homesty.ai")[Homesty.ai LLP], "Co-Founder & Sole Engineer") · Remote · Nov 2025 – Present
-- Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry.
-- Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
+- Sole engineer on a live buyer-side real-estate AI: Next.js 15, Postgres + pgvector, Prisma, GPT-4o and Claude streaming, behind rate limiting, intent routing, and Sentry. Built the chat path around refusal-first retrieval and a mid-stream guardrail — the AI declines when it has no grounded source rather than improvising, which in real estate is a liability, not a UX choice. Both patterns were hardened into standalone OSS (Anchor, Tripwire).
 #h(0pt) #tag[Next.js 15] #tag[Postgres + pgvector] #tag[Prisma 7] #tag[GPT-4o] #tag[Claude] #tag[Sentry] #tag[Docker]
 
 == Education
