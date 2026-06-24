@@ -51,7 +51,7 @@
 
 == Summary
 
-I build the reliability layer that lets AI systems run in production without supervision — refusal when retrieval fails, abort when output goes off-script, eval-gating before merge, idempotency under webhook re-delivery. Co-Founder and sole engineer on Homesty.ai LLP since Nov 2025, serving real traffic on Next.js 15 + pgvector + GPT-4o. Four #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] npm packages (one with SLSA provenance) and a public #link("https://github.com/marketplace/actions/goldset")[GitHub Marketplace Action] — extracted from what production actually broke.
+I build the reliability layer that lets AI systems run in production without supervision — refusal when retrieval fails, abort when output goes off-script, eval-gating before merge, idempotency under webhook re-delivery. Co-Founder and sole engineer on Homesty.ai LLP since Nov 2025, serving real traffic on Next.js 15 + pgvector + GPT-4o. Four #link("https://www.npmjs.com/~ykstormsorg")[\u{40}ykstormsorg] npm packages (one with SLSA provenance) and a public #link("https://github.com/marketplace/actions/goldset-ai-eval-gate")[GitHub Marketplace Action] — extracted from what production actually broke.
 
 == Technical Skills
 
