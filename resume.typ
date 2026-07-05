@@ -29,22 +29,13 @@
 ]
 
 // ─── HEADER ──────────────────────────────────────────────────────────────
-#grid(
-  columns: (2fr, 1fr),
-  align: (left + bottom, right + bottom),
-  [
-    #text(size: 22pt, weight: "bold")[#link("https://lakshyaraj-dev.vercel.app")[Lakshyaraj Singh Rao]] \
-    #v(0.04em)
-    #text(size: 10pt, fill: accent)[#link("https://github.com/ykstorm/anvil")[Backend Engineer] · #link("https://github.com/ykstorm/tripwire")[AI Infrastructure] · #link("https://codecraft-ai-tau.vercel.app")[Full-Stack] · #link("https://github.com/ykstorm/stackup")[DevOps]]
-  ],
-  [
-    #text(size: 9pt, fill: muted)[
-      Mumbai, India · Open to Bangalore / Remote \
-      #link("https://homesty.ai")[homesty.ai] · #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj\u{40}gmail.com] \
-      #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[GitHub] · #link("https://linkedin.com/in/lakshyaraj-singh-rao-840273152")[LinkedIn] · #link("https://www.npmjs.com/~ykstormsorg")[npm]
-    ]
-  ]
-)
+#align(center)[
+  #text(size: 22pt, weight: "bold")[#link("https://lakshyaraj-dev.vercel.app")[Lakshyaraj Singh Rao]]
+  #v(0.2em)
+  #text(size: 10pt, fill: accent)[#link("https://github.com/ykstorm/anvil")[Backend Engineer] · #link("https://github.com/ykstorm/tripwire")[AI Infrastructure] · #link("https://codecraft-ai-tau.vercel.app")[Full-Stack] · #link("https://github.com/ykstorm/stackup")[DevOps]]
+  #v(0.24em)
+  #text(size: 9pt, fill: muted)[Mumbai, India · Open to Bangalore / Remote · #link("https://homesty.ai")[homesty.ai] · #link("mailto:raolakshyaraj@gmail.com")[raolakshyaraj\u{40}gmail.com] · #link("https://lakshyaraj-dev.vercel.app")[lakshyaraj-dev.vercel.app] · #link("https://github.com/ykstorm")[GitHub] · #link("https://linkedin.com/in/lakshyaraj-singh-rao-840273152")[LinkedIn] · #link("https://www.npmjs.com/~ykstormsorg")[npm]]
+]
 
 #v(0.4em)
 #line(length: 100%, stroke: 0.6pt)
