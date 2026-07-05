@@ -69,7 +69,7 @@ I build the reliability layer that lets AI systems run in production without sup
 #h(0pt) #tag[TypeScript] #tag[esbuild] #tag[OpenAI] #tag[Anthropic] #tag[GitHub Actions]
 #v(0.06em)
 #project-header("Stackup", "Creator") · #link("https://github.com/ykstorm/stackup")[github.com/ykstorm/stackup]
-- Production Kubernetes patterns cost \$200+/month on cloud, and most "K8s tutorials" stop at `kubectl run nginx`. *Stackup runs the full production stack on your laptop in ~15 minutes: ArgoCD GitOps app-of-apps, Argo Rollouts canary with real Prometheus success-rate analysis, kube-prometheus-stack monitoring.* **Canary verified live: 25→50→75→100% with the ≥0.95 analysis gate passing 3×.**
+- Production Kubernetes patterns cost \$200+/month on cloud, and most "K8s tutorials" stop at `kubectl run nginx`. *Stackup runs the full production stack on your laptop in ~15 minutes: ArgoCD GitOps app-of-apps, Argo Rollouts canary with real Prometheus success-rate analysis, kube-prometheus-stack monitoring.* **Canary CI-verified: kind + Argo Rollouts advancing 25→50→75→100% only after a live Prometheus ≥0.95 success-rate gate passes.**
 #h(0pt) #tag[Kubernetes] #tag[ArgoCD] #tag[Helm] #tag[kind] #tag[Grafana]
 #v(0.06em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
