@@ -65,10 +65,6 @@ I build the reliability layer that lets AI systems run in production without sup
 - Every RAG demo breaks when retrieval finds nothing useful — the AI just makes things up. *Anchor is the RAG layer that refuses instead of guessing: above the similarity floor it returns chunks with provenance; below, it returns `refused: true`.* Built into a real-estate production app where a hallucination is a lawsuit. Live playground; **p50 2.6 ms retrieval at 100k vectors** (HNSW), measured in CI.
 #h(0pt) #tag[Postgres + pgvector] #tag[Prisma 7] #tag[Next.js 15] #tag[OpenAI embeddings]
 #v(0.06em)
-#project-header("Codecraft", "Creator") · #link("https://codecraft-ai-tau.vercel.app")[codecraft-ai-tau.vercel.app]
-- "Try-it" links die when users have to install Node and clone the repo. *Codecraft runs a real Vite + React dev server inside the browser tab — edit code in Monaco, type `npm install dayjs` in the terminal, watch the preview hot-reload in under 2 seconds.* No backend, no install; the COOP/COEP cross-origin-isolation boundary unlocks `SharedArrayBuffer`, and an IndexedDB snapshot cache drops repeat-visit boots under 20s.
-#h(0pt) #tag[WebContainers] #tag[Monaco] #tag[xterm] #tag[Vite] #tag[COOP/COEP]
-#v(0.06em)
 #project-header("Anvil", "Creator") · #link("https://github.com/ykstorm/anvil")[github.com/ykstorm/anvil]
 - Stripe sends the same webhook three times when the internet hiccups, and your worker double-charges users. *Anvil is the dedup + retry + dead-letter pipeline that handles every webhook source (Stripe, GitHub, Twilio) so your worker never repeats.* `\u{40}ykstormsorg/anvil` v0.1.1 on npm with SLSA provenance; Terraform module + Helm chart. **~10.5k req/s ingress, constant-time HMAC verify (0.9% timing delta)** — measured in CI.
 #h(0pt) #tag[TypeScript] #tag[BullMQ] #tag[Redis] #tag[Express] #tag[Terraform] #tag[Helm]
