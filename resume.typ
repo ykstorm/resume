@@ -7,10 +7,8 @@
 #let tag-fill = rgb("#f0f4f8")
 #let tag-stroke = rgb("#d9e1ec")
 
-#show heading.where(level: 2): it => block(below: 0.2em, above: 0.32em)[
+#show heading.where(level: 2): it => block(below: 0.24em, above: 0.4em)[
   #text(size: 10.5pt, weight: "bold", fill: accent, tracking: 0.8pt, upper(it.body))
-  #v(-0.4em)
-  #line(length: 100%, stroke: 0.5pt + accent)
 ]
 
 #let tag(content) = box(
@@ -73,7 +71,7 @@ I build the reliability layer that lets AI systems run in production without sup
 #h(0pt) #tag[Kubernetes] #tag[ArgoCD] #tag[Helm] #tag[kind] #tag[Grafana]
 #v(0.06em)
 #project-header("Quickdraw", "Creator") · #link("https://github.com/ykstorm/quickdraw")[github.com/ykstorm/quickdraw]
-- Every AI provider claims to be "fastest" — but fast on what prompts, what network, what time of day? *Quickdraw measures real LLM streaming on your prompts: TTFT, tokens/sec, p50/p95/p99, and cost per 1K across OpenAI + Anthropic.* `quickdraw diff` catches regressions between nightly runs. `\u{40}ykstormsorg/quickdraw` v1.0.3 on npm with SLSA build provenance.
+- Every AI provider claims to be "fastest" — but fast on what prompts, what network, what time of day? *Quickdraw measures real LLM streaming on your prompts: TTFT, tokens/sec, p50/p95/p99, and cost per 1K across OpenAI + Anthropic.* `quickdraw diff` catches regressions between nightly runs. `\u{40}ykstormsorg/quickdraw` v1.0.4 on npm with SLSA build provenance. **Claude Haiku live: TTFT p50 739 ms · 85.6 tok/s** — measured in CI.
 #h(0pt) #tag[TypeScript] #tag[OpenAI] #tag[Anthropic] #tag[CLI]
 
 == Technical Skills
@@ -95,7 +93,8 @@ I build the reliability layer that lets AI systems run in production without sup
   ],
   [
     *Infra / AI* \
-    Docker · Kubernetes · Helm \
+    Docker · Kubernetes · Helm · kind \
+    ArgoCD · Argo Rollouts · Prometheus \
     Terraform · GitHub Actions · Vercel \
     OpenAI · Anthropic · Ollama
   ]
